@@ -34,8 +34,7 @@ class App extends React.Component{
           this.setState( { squares: Array(9).fill( null ) } )
           this.setState( { count: 0 } )
         }, 3000 )
-      }
-
+      } 
     }
   }
   
@@ -53,7 +52,11 @@ class App extends React.Component{
       alert( 'Так нельзя!' )
     }
     this.isWinner()
+  }
 
+  resetAll = () => {
+    this.setState( { squares: Array(9).fill( null ) } )
+    this.setState( { count: 0 } )
   }
 
   render(){
@@ -67,8 +70,10 @@ class App extends React.Component{
         <div className="ttt-grid" onClick={this.clickHandler} data="5">{this.state.squares[5]}</div>
         <div className="ttt-grid" onClick={this.clickHandler} data="6">{this.state.squares[6]}</div>
         <div className="ttt-grid" onClick={this.clickHandler} data="7">{this.state.squares[7]}</div>
-        <div className="ttt-grid" onClick={this.clickHandler} data="8">{this.state.squares[8]}</div>
+        <div className="ttt-grid" onClick={this.clickHandler} data="8">{this.state.squares[8]}</div>  
+        <button onClick={ this.resetAll } > Reset </button>
       </div>
+      
     )
   }
 }
