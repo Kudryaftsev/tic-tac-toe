@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+.tic-tac-toe
+{
+  width: 150px;
+  height: 150px;
+  margin: 50px auto;
+  border: 2px solid black;
+}
+
+.ttt-grid
+{
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  float: left;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 35px;
+}
+
+.ttt-grid:hover
+{
+  background-color: lightcoral;
+}
